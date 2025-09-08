@@ -1,0 +1,34 @@
+facebook:
+  label: Facebook
+  permalink: /facebook
+  description: Facebook tag description
+
+hello:
+  label: Hello
+  permalink: /hello
+  description: Hello tag description
+
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Docusaurus tag description
+
+hola:
+  label: Hola
+  permalink: /hola
+  description: Hola tag description
+
+django:
+  label: django
+  permalink: /django
+  description: django tutorial tag description
+
+python:
+  label: python
+  permalink: /python
+  description: python tutorial tag description
+
+tutorial:
+  label: tutorial
+  permalink: /tutorial
+  description: tutorial tag description
