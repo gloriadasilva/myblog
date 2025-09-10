@@ -1,11 +1,56 @@
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  padding: 4rem 0;
+  text-align: center;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.row {
+  display: flex;
+  justify-content: center;  /* centers cards horizontally */
+  flex-wrap: wrap;
+  align-items: stretch;     /* keeps cards equal height */
+  gap: 2rem;                /* spacing between cards */
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps button at bottom */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.tutorialButton {
+  font-size: 1.1rem;          
+  font-weight: 600;            
+  padding: 10px 20px;          
+  color: #5bc0eb;   /* light blue */
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  margin-top: auto; /* ensures button sticks to bottom of card body */
+}
+
+.tutorialButton:hover {
+  transform: translateY(-2px);
+}
+
+.arrow {
+  margin-left: 6px;           
+  transition: margin-left 0.2s ease;
+}
+
+.tutorialButton:hover .arrow {
+  margin-left: 10px;          
+}
+

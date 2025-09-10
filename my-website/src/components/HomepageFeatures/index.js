@@ -1,49 +1,50 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
+import React from 'react';
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Step-by-Step Tutorials',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        <div className='text'> Learn complex backend web development technologies and build practical projects through step-by-step guides.
+        </div>
+          
+        <a
+          className={styles.tutorialButton}
+          href="/blog/django-tutorial"
+  >
+           Explore Tutorials <span className={styles.arrow}>&rarr;</span>
+        </a>
+
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Tech Insights',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        <div>Stay updated on the latest tech trends, tools, news, and frameworks</div>
+        <br/>
+            <a
+               className={styles.tutorialButton}
+               href=""
+            >
+              Explore Tech Insights <span className={styles.arrow}>&rarr;</span>
+           </a>
       </>
     ),
   },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
+
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ title, description }) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className="col col--5"> {/* <-- change here */}
+      <div className="card shadow--md">
+        <div className="card__body">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   );

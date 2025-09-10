@@ -10,9 +10,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'dTechreative Blog',
+  tagline: 'Tutorials and Tech Insights',
+  favicon: 'img/logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -27,8 +27,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Gloria Tejuosho', // Usually your GitHub org/user name.
+  projectName: 'dTechreative Blog', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -47,6 +47,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -55,6 +56,9 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: "All posts",
+          blogSidebarCount: "ALL",
+
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -79,20 +83,14 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.png',
       navbar: {
-        title: 'My Site',
+        title: 'dTechreative',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Gloria Techreative Logo',
+          src: 'img/logo.png',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
@@ -105,28 +103,20 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Portfolio',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Portfolio',
+                href: 'https://erratic-steam-2b6.notion.site/Welcome-to-My-Technical-Content-Workfolio-229d1ba78639806e890cd7bdcccd8029'
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Socials',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Linkedin',
+                href: 'https://www.linkedin.com/in/gloria-tejuosho-0547012a7/',
               },
             ],
           },
@@ -144,7 +134,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Love.`,
       },
       prism: {
         theme: prismThemes.github,
