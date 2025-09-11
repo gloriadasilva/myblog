@@ -46,6 +46,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+
         docs: {
           
           sidebarPath: './sidebars.js',
@@ -75,12 +76,18 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        googleAnalytics: 
+        {
+          trackingID: 'G-JFM3NH82BH', // <-- replace with your GA ID
+          anonymizeIP: true,           // optional, recommended
+        },
       }),
     ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+
     ({
       // Replace with your project's social card
       image: 'img/logo.png',
