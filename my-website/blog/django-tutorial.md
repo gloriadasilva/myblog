@@ -327,7 +327,7 @@ urlpatterns = [
 ]
 ```
 
-**Step 3**: Create a function for each of the blog URLs in the `views.py` file.
+**Step 3**: Create a function for each of the blog URLs in the `views.py` file
 
 ``` javascript showLineNumbers
 
