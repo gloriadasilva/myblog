@@ -1,35 +1,84 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: rgba(70, 160, 255, 0.85); /* DodgerBlue */
-  --ifm-color-primary-dark: rgba(50, 140, 230, 0.85);
-  --ifm-color-primary-darker: rgba(20, 100, 180, 0.85);
-  --ifm-color-primary-light: rgba(70, 160, 255, 0.85);
-  --ifm-color-primary-lighter: rgba(120, 190, 255, 0.85);
+/* Container row override to ensure consistent layout */
+/* Row: our own grid container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
-/* Dark mode */
-html[data-theme='dark'] {
-  --ifm-color-primary: rgba(70, 160, 255, 0.9);
-  --ifm-color-primary-dark: rgba(50, 140, 230, 0.9);
-  --ifm-color-primary-darker: rgba(40, 120, 200, 0.9);
-  --ifm-color-primary-light: rgba(120, 190, 255, 0.9);
-  --ifm-color-primary-lighter: rgba(170, 215, 255, 0.9);
+.card {
+  flex: 1; /* Make both equal width */
 }
 
-
-.footer {
-  border-top: 1px solid rgba(30, 144, 255, 0.3);
+/* Column: full width on small */
+.featureColumn {
+  box-sizing: border-box;
+  padding: 0.75rem;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
-html[data-theme='dark'] .footer {
-  background: rgba(30, 144, 255, 0.1); /* lighter for contrast */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(70, 160, 255, 0.3);
+/* Force two equal columns on >=768px */
+@media (min-width: 768px) {
+  .featureColumn {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+/* Card visuals */
+.featureCard {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--ifm-card-background, #fff);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.cardBody {
+  padding: 1.5rem;
+}
+
+.featureTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: var(--ifm-color-primary);
+}
+
+.featureDesc {
+  color: #444;
+  line-height: 1.5;
+}
+
+/* CTA button style */
+.tutorialButton {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(30,144,255,0.15);
+  background: rgba(30,144,255,0.06);
+  text-decoration: none;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.tutorialButton:hover {
+  background: rgba(30,144,255,0.12);
+  border-color: rgba(30,144,255,0.25);
+}
+
+/* arrow spacing */
+.arrow {
+  margin-left: 0.4rem;
+}
+
+/* spacing to avoid overlap */
+.features {
+  padding: 2rem 0;
 }

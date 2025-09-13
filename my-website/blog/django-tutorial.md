@@ -7,18 +7,29 @@ keyword: ["django tutorial for beginners", "Django projects with source code", "
 ", "Python tutorial"]
 tags: [django, python, tutorial]
 ---
-Have you been learning the basics of Django and are looking for a simple yet practical project to build so you can put your knowledge into practice? If yes, then you have found a goldmine.
 
-This tutorial series will walk you through several Django project ideas for beginners with source code. That way, you are not just learning Django concepts but also building real-world projects with it and stacking up your portfolio in the process—a win-win if you think about it.
+
+Have you been learning the **basics of Django** and are now looking for a simple yet practical project to build so you can put your knowledge into practice? If yes, then you have found a goldmine.
+
+This tutorial series will walk you through several **Django project ideas for beginners with source code**. That way, you are not just learning Django concepts but also building real-world projects with it and stacking up your portfolio in the process—a win-win if you think about it.
 
 In this first series, you will build a simple blog website using Django. With this project, you will learn how to route URLs, load static files, and pass dynamic data to templates (HTML) in Django.
 
 Don’t worry if any of these concepts sound unfamiliar to you. Ignore them for now and focus more on understanding the steps in this guide, as I will explain them in the easiest way possible.
-Hint: Ensure you code along so you get to understand better.
+
+:::tip
+
+  Ensure you code along so you get to understand better.
+
+:::
+
 
 Before we get into it, ensure you have the following:
-A code editor installed on your device. E.g., VSCode
-Basic understanding of HTML and CSS.
+
+- A code editor installed on your device. E.g., VSCode
+
+- Basic understanding of HTML and CSS.
+
 Without any further ado, let’s get into it and build a super-powerful blog website!
 
 <!-- truncate -->
@@ -30,7 +41,7 @@ In this tutorial, you will build a simple blog application with a homepage that 
 
 Here is how the output will look:
 
-![Amazon EKS Cover Image](./img/blogs.png)
+![Simple blog home page with Django](./img/blogs.png)
 
 ## How to Set Up a Django Project
 Follow these steps to set up a Django project on your device.
@@ -49,6 +60,7 @@ cd myblog
  python manage.py startapp blogapp
 ```
 The Django app is a smaller subset of your Django project, and it focuses on a specific feature.
+
 Think of it as a kitchen or living room in a single house (Django Project). Each of these rooms (Django app) performs different functions, but they are still in a single house (Django project). Get that?
 Therefore, you can have more than one Django app in a Django project.
 
@@ -100,7 +112,7 @@ def index (request):
 ```
 
 Notice, you have not created an HTML file yet. To do this, you need to set up a template folder.
-The template folder is where all the HTML files you want to render will live 
+This template folder is where all the HTML files you want to render will live 
 
 **Step 6**: Create a folder inside your project.
 

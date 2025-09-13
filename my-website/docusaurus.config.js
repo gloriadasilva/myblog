@@ -13,6 +13,7 @@ const config = {
   title: 'dTechreative Blog',
   tagline: 'Tutorials and Tech Insights',
   favicon: 'img/logo.png',
+  
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -20,7 +21,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://dtechreative-blog.vercel.app/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -76,11 +77,25 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-        googleAnalytics: 
+        gtag: 
         {
-          trackingID: 'G-JFM3NH82BH', // <-- replace with your GA ID
-          anonymizeIP: true,           // optional, recommended
+          trackingID: 'G-JFM3NH82BH', 
+          anonymizeIP: true,           
         },
+        sitemap: {
+          lastmod: "date",
+          changefreq: "weekly",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
+          createSitemapItems: async (params) => {
+            const { defaultCreateSitemapItems, ...rest } = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes("/page/"));
+          },
+        },
+
+        
       }),
     ],
   ],
@@ -88,9 +103,16 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
-    ({
+    (
+      
+      {
       // Replace with your project's social card
       image: 'img/logo.png',
+      metadata: [
+        {name: 'keywords', content: 'Tech, Tutorials, Blockchain, Web3, Python, Django tutorials, Django for beginners, Backend Dev3lopment'},
+        {name: 'author', content: 'Gloria Tejuosho'},
+      ],
+
       navbar: {
         title: 'dTechreative',
         logo: {
@@ -143,6 +165,12 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Love.`,
       },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
+
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
