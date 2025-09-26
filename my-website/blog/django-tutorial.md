@@ -132,6 +132,7 @@ E.g., index.html
 
 **Step 10**: Scroll down to the (predefined) `TEMPLATES` variable and enter this code inside the brackets.
 `BASE_DIR, 'templates'`
+
 :::note
 
 You should replace `templates` with the name of the HTML folder you created.
@@ -269,7 +270,14 @@ a{
     
 }
 ```
-Please note that you can adjust the style to suit your preferences.
+
+:::note
+If your CSS styling doesn't reflect, run a hard refresh. You can do this by clicking 'Ctrl' and 'F5' together.
+Also note that you can adjust the CSS style to suit your preferences.
+
+:::
+This should appear on your screen once you run your local server:
+![Simple blog home page with Django](./img/django-blog-image.png)
 
 ## How to Dynamically Pass Blog Details to Your HTML File
 Notice that each of the blog titles on the home page is hardcoded in the HTML file. The next step is to load the blog's title from the backend dynamically. To do this, follow these steps:
@@ -371,7 +379,7 @@ Yes, Django is worth learning in 2025. This framework offers extensive built-in 
 
 **2. Is Flask Better than Django?**
 
-No, Flask is not better than Django. Choosing between the two frameworks depends on your project needs. Flask is best for building simple to middle applications such as REST APIs, blogs, and social media applications. Django, on the other hand, is best for building complex applications such as e-commerce platforms, content management systems, and educational platforms.
+No, Flask is not better than Django. Choosing between the two frameworks depends on your project needs. Flask is best for building simple to middle applications such as RESTful APIs, blogs, and social media applications. Django, on the other hand, is best for building complex applications such as e-commerce platforms, content management systems, and educational platforms.
 
 
 **3. Where Can I Host My Django Project for Free?**
