@@ -7,7 +7,7 @@ const FeatureList = [
     description: (
       <>
         <div>Learn complex backend web development technologies and build practical projects through step-by-step guides.</div>
-        <a className={styles.tutorialButton} href="/blog/django-tutorial">
+        <a className={styles.tutorialButton} href="https://dtechreative-blog.vercel.app/blog/django-tutorial">
           Explore Tutorials <span className={styles.arrow}>&rarr;</span>
         </a>
       </>
@@ -18,7 +18,7 @@ const FeatureList = [
     description: (
       <>
         <div>Stay updated on the latest tech trends, tools, news, and frameworks.</div>
-        <a className={styles.tutorialButton} href="/blog">
+        <a className={styles.tutorialButton} href="https://dtechreative-blog.vercel.app/blog/flask-vs-django">
           Explore Tech Insights <span className={styles.arrow}>&rarr;</span>
         </a>
       </>

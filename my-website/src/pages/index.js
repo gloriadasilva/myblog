@@ -18,7 +18,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <a
             className="button button--secondary button--lg"
-            href="/blog/django-tutorial"
+            href="https://dtechreative-blog.vercel.app/blog/django-tutorial"
           >
             Get Started 
           </a>
